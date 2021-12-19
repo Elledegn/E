@@ -1,0 +1,356 @@
+:root {
+    --amo-bg-color:#F6F4F2;
+    --amo-knap-color:#D9C5B2;
+    --amo-media-tablet: 768px;
+    --amo-media-pc:992px;
+}
+
+*,
+::after,
+::before {
+
+    box-sizing: border-box;
+}
+@media (prefers-reduced-motion) {
+    :root {
+    scroll-behavior: smooth
+    }
+}
+
+body {
+    margin: 0;
+}
+
+
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    padding: 8px;
+}
+
+.menuitems__container {
+    display: none;
+    list-style: none;
+    padding: 0%;
+}
+
+.menudropdown {
+    display: none;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    background-color: white;
+    list-style: none;
+}
+
+.menudropdown > li {
+    padding: 5px;
+}
+
+.menudropdown a {
+    color: black;
+    text-decoration: none;
+}
+
+/*.menuitems__container input {
+    display: none;
+}*/
+
+
+.menuitems__container, 
+.mobileicon{
+    display: none;
+}
+
+  .navigation__container input:checked ~ .menuitems__container{
+    display: block;
+}
+
+.mobileiconlabel {
+    float: right;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+label {
+    font-size: 24px;
+}
+
+.menuitemcheck {
+    display: none;
+}
+
+.menu-item {
+    width: 100%;
+    text-align: center;
+}
+
+.menu-item:hover,
+.menudropdown > li:hover {
+    background-color: var(--amo-knap-color);
+}
+.menu-item > a,
+.menu-item > label {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+}
+
+
+
+.bgb {
+    background-color: var(--amo-bg-color);
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.btn-wrap > button {
+    background-color: var(--amo-knap-color);
+} 
+
+.container {
+    margin: 0 auto;
+    display: block;
+    padding: 20px 15px;
+    width: 100%;
+}
+
+.btn-wrap {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    float: left;
+}
+
+.btn-wrap > button {
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 20px 0%;
+    font-size: 20px;
+}
+
+.btn-wrap > button > a {
+    color: black;
+    text-decoration: none;
+    display: block;  
+}
+
+.clearbox {
+    width: 100%;
+    display: block;
+    height: 1px;
+    clear: both;
+}
+
+.footer-wrap {
+    padding: 15px;
+    float: left;
+    width: 100%;
+    display: block;
+}
+
+
+
+#banner > picture,
+#banner > picture > img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.style {
+    padding: 10px;
+    float: left;
+    display: block;
+    width: 50%;
+    text-align: center;
+    color: black;
+}
+
+.style1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+}
+
+.style img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+figure {
+    margin: 0%;
+}
+
+.farve {
+    background-color: var(--amo-bg-color);
+}
+
+h2 {
+    text-align: center;
+}
+
+.ingredienser {
+    list-style: none;
+    padding: 0%;
+    width: 100%;
+}
+
+.ingredienser li {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--amo-bg-color);
+}
+
+.Some {
+    width: 80px;
+}
+
+.flex-container {
+    height: 120px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row {
+    width: auto;
+}
+.flex-item {
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    text-align: center;
+    float: left;
+}
+
+@media screen and (max-width: 767px) {
+
+
+    .menu-item input:checked ~ .menudropdown{
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 768px){
+    header {
+        background-color: var(--amo-bg-color);
+    } 
+
+    .mobileiconlabel, 
+    .mobileicon{
+        display: none;
+    }
+    
+    .menudropdown {
+        width: 200px;
+        position: absolute;
+    }
+
+    .menuitems__container{
+        display: flex;
+        justify-content: flex-end;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .navigation__container {
+        background-color: white;
+    }
+
+    .menu-item {
+        width: 500px;
+        margin-right: 20px;
+    }
+
+    .menu-item:hover .menudropdown{
+        display: block;
+    }
+    .container {
+        width: var(--amo-media-tablet);
+    }
+
+    .btn-wrap {
+        width: 33.33%;
+    }
+
+    .footer-wrap {
+        width: 50%;
+    }
+
+    .style {
+        width: 33.33%;
+    }
+
+    .ingredienser li {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .container {
+        width: var(--amo-media-pc);
+    }
+
+    .btn-wrap {
+        width: 16.66%;
+    }
+
+    .footer-wrap {
+        width: 33.33%;
+    }
+
+    .style {
+        width: 25%;
+    }
+}
+
+
+/*skrifter */
+
+ p, 
+ .ingredienser, 
+ main button,
+ figcaption {
+    font-family: futura-pt, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+}
+
+
+
+nav, h3 {
+    font-family: futura-pt-condensed, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+}
+
+
+h1, h2 {
+    font-family: futura-pt-condensed, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
